@@ -1,14 +1,28 @@
 <ion-header>
-  <ion-navbar>
-    <ion-title>
-      Ionic Blank
-    </ion-title>
-  </ion-navbar>
+
 </ion-header>
 
 <ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+  <form (ngSubmit)="pay()">
+      <ion-item>
+        <ion-label floating>
+          <ion-icon name="cash"></ion-icon>
+        </ion-label>
+        <ion-input type="number" [(ngModel)]="this.amount" name="amount"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label floating>
+          <ion-icon name="mail"></ion-icon>
+        </ion-label>
+        <ion-input [(ngModel)]="this.email" name="email"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label floating>
+          <ion-icon name="call"></ion-icon>
+        </ion-label>
+        <ion-input [(ngModel)]="this.phonenumber" name="phonenumber"></ion-input>
+      </ion-item>
+
+      <button ion-button type="submit" block>Pay with paytm</button>
+    </form>
 </ion-content>

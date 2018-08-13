@@ -7,8 +7,16 @@ import { NavController } from 'ionic-angular';
 })
 export class HomePage {
 
+  amount: number;
+  email: string;
+  phonenummber: string;
+
+
   constructor(public navCtrl: NavController) {
 
   }
 
+  pay(){
+    console.log(this.amount);
+    }
 }
