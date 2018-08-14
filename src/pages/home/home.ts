@@ -13,11 +13,12 @@ export class HomePage {
   phonenummber: string;
 
 
-  constructor(public navCtrl: NavController) {
+  constructor(public navCtrl: NavController, private iab: InAppBrowser) {
 
   }
 
   pay(){
     console.log(this.amount);
+    const browser = this.iab.create('http://localhost/TxnTest.php');
     }
 }
